@@ -19,7 +19,6 @@ import {
 } from "lucide-react";
 import Breadcrumb from "@/components/ui/Breadcrumb";
 
-
 const contactSchema = z.object({
   fullName: z.string().min(2, "Full name is required"),
   email: z.string().email("Please enter a valid email address"),
@@ -31,10 +30,10 @@ type ContactFormData = z.infer<typeof contactSchema>;
 
 const subjects = [
   "General Inquiry",
-  "Room Reservation",
-  "Events & Weddings",
-  "Conference & Corporate",
-  "Activities & Tours",
+  "Apartment Booking",
+  "Long-Term Stay",
+  "Corporate Booking",
+  "Airport Pickup",
   "Feedback",
 ];
 
@@ -42,7 +41,7 @@ const contactDetails = [
   {
     icon: MapPin,
     label: "Physical Address",
-    value: "North Karonga, Lake Malawi Shore\nKaronga, Malawi",
+    value: "Area 47, Lilongwe\nMalawi",
   },
   {
     icon: Clock,
@@ -57,7 +56,7 @@ const contactDetails = [
   {
     icon: Mail,
     label: "Email",
-    value: "info@mikomabeachlodge.com",
+    value: "info@2ntapartments.com",
   },
 ];
 
@@ -106,12 +105,12 @@ export default function ContactPage() {
               Get In Touch
             </p>
             <h1 className="font-display text-4xl md:text-6xl text-primary mb-6 leading-tight">
-              Connect with the Lake.
+              Let's Get You Settled In.
             </h1>
             <p className="font-body text-base md:text-lg text-on-surface-variant leading-relaxed">
-              Whether you're planning a serene getaway, a wedding on the shores
-              of Lake Malawi, or a corporate retreat, our team is here to assist
-              you in every detail.
+              Whether you're booking a short stay, a longer relocation, or a
+              corporate stay in Lilongwe, our team is here to help with every
+              detail.
             </p>
           </motion.div>
         </div>
@@ -243,13 +242,13 @@ export default function ContactPage() {
 
                     {/* Message */}
                     <div className="space-y-2">
-                      <label className="font-body text-xs tracking-widests uppercase text-on-surface-variant block">
+                      <label className="font-body text-xs tracking-widest uppercase text-on-surface-variant block">
                         Your Message *
                       </label>
                       <textarea
                         {...register("message")}
                         rows={5}
-                        placeholder="How can we help you plan your stay?"
+                        placeholder="How can we help with your stay?"
                         className={`w-full bg-background border px-4 py-3 font-body text-sm text-on-surface focus:outline-none focus:border-secondary transition-colors resize-none ${
                           errors.message
                             ? "border-red-400"
@@ -318,7 +317,8 @@ export default function ContactPage() {
               </div>
 
               {/* Action Links */}
-               <a
+              
+              <a
                 href="https://wa.me/265999000000"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -354,7 +354,7 @@ export default function ContactPage() {
               </a>
 
               <a
-                href="mailto:info@mikomabeachlodge.com"
+                href="mailto:info@2ntapartments.com"
                 className="flex items-center justify-between border border-outline-variant/50 text-on-surface-variant p-5 hover:border-primary hover:text-primary transition-all group"
               >
                 <div className="flex items-center gap-4">
@@ -371,14 +371,14 @@ export default function ContactPage() {
 
               {/* Map */}
               <a
-                href="https://maps.google.com/?q=Karonga,Malawi"
+                href="https://maps.google.com/?q=Lilongwe,Malawi"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="block relative h-52 overflow-hidden group"
               >
                 <Image
-                  src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800"
-                  alt="Karonga, Lake Malawi"
+                  src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=800"
+                  alt="Lilongwe, Malawi"
                   fill
                   className="object-cover group-hover:scale-105 transition-transform duration-700"
                 />
@@ -413,10 +413,10 @@ export default function ContactPage() {
                 Address
               </p>
               <p className="font-display text-lg text-white mb-2">
-                North Karonga Shore
+                Area 47
               </p>
               <p className="font-body text-sm text-white/60">
-                Karonga, Northern Malawi
+                Lilongwe, Malawi
               </p>
             </motion.div>
 

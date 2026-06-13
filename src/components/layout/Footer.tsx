@@ -2,8 +2,8 @@ import Link from "next/link";
 import { Mail, MapPin, Phone } from "lucide-react";
 
 const exploreLinks = [
-  { label: "The Lodge", href: "/about" },
-  { label: "Suites", href: "/rooms" },
+  { label: "About Us", href: "/about" },
+  { label: "Apartments", href: "/rooms" },
   { label: "Facilities", href: "/facilities" },
   { label: "Gallery", href: "/gallery" },
 ];
@@ -28,59 +28,58 @@ export default function Footer() {
             {/* Logo */}
             <Link href="/" className="block">
               <span className="font-display text-xl tracking-[0.2em] uppercase text-white block">
-                MIKOMA
+                2NT
               </span>
               <span className="font-display text-xl tracking-[0.2em] uppercase text-accent block">
-                BEACH LODGE
+                APARTMENTS LODGE
               </span>
             </Link>
 
             <p className="font-body text-sm text-white/60 leading-relaxed max-w-xs">
-              Experience the sublime beauty of Lake Malawi in a setting that
-              redefines organic luxury on Africa's finest freshwater lake.
+              Modern, fully furnished apartments in a secure compound in the
+              heart of Lilongwe — your comfortable home away from home.
             </p>
 
             {/* Social Icons */}
-<div className="flex items-center gap-4">
-  <a
-  href="#"
-  className="w-9 h-9 border border-white/20 flex items-center justify-center text-white/60 hover:border-accent hover:text-accent transition-all duration-300"
-  aria-label="Facebook"
->
-  <svg width="15" height="15" fill="currentColor" viewBox="0 0 24 24">
-    <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
-  </svg>
-</a>
-<a
-  href="#"
-  className="w-9 h-9 border border-white/20 flex items-center justify-center text-white/60 hover:border-accent hover:text-accent transition-all duration-300"
-  aria-label="Instagram"
->
-  <svg width="15" height="15" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
-    <circle cx="12" cy="12" r="4"/>
-    <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/>
-  </svg>
-</a>
-
-<a
-  href="#"
-  className="w-9 h-9 border border-white/20 flex items-center justify-center text-white/60 hover:border-accent hover:text-accent transition-all duration-300"
-  aria-label="Twitter"
->
-  <svg width="15" height="15" fill="currentColor" viewBox="0 0 24 24">
-    <path d="M4 4l16 16M4 20L20 4"/>
-    <path d="M20 4 4 20M4 4l16 16" stroke="currentColor" strokeWidth="2" fill="none"/>
-  </svg>
-</a>
-</div>
+            <div className="flex items-center gap-4">
+              <a
+                href="#"
+                className="w-9 h-9 border border-white/20 flex items-center justify-center text-white/60 hover:border-accent hover:text-accent transition-all duration-300"
+                aria-label="Facebook"
+              >
+                <svg width="15" height="15" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+                </svg>
+              </a>
+              <a
+                href="#"
+                className="w-9 h-9 border border-white/20 flex items-center justify-center text-white/60 hover:border-accent hover:text-accent transition-all duration-300"
+                aria-label="Instagram"
+              >
+                <svg width="15" height="15" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                  <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                  <circle cx="12" cy="12" r="4"/>
+                  <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/>
+                </svg>
+              </a>
+              <a
+                href="#"
+                className="w-9 h-9 border border-white/20 flex items-center justify-center text-white/60 hover:border-accent hover:text-accent transition-all duration-300"
+                aria-label="Twitter"
+              >
+                <svg width="15" height="15" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M4 4l16 16M4 20L20 4"/>
+                  <path d="M20 4 4 20M4 4l16 16" stroke="currentColor" strokeWidth="2" fill="none"/>
+                </svg>
+              </a>
+            </div>
 
             {/* Contact Info */}
             <div className="space-y-3">
               <div className="flex items-start gap-3">
                 <MapPin size={15} className="text-accent shrink-0 mt-0.5" />
                 <span className="font-body text-sm text-white/60">
-                  Karonga, Lake Malawi, Malawi
+                  Area 47, Lilongwe, Malawi
                 </span>
               </div>
               <div className="flex items-center gap-3">
@@ -92,7 +91,7 @@ export default function Footer() {
               <div className="flex items-center gap-3">
                 <Mail size={15} className="text-accent shrink-0" />
                 <span className="font-body text-sm text-white/60">
-                  info@mikomabeachlodge.com
+                  info@2ntapartments.com
                 </span>
               </div>
             </div>
@@ -144,8 +143,8 @@ export default function Footer() {
               Newsletter
             </h4>
             <p className="font-body text-sm text-white/60 leading-relaxed">
-              Stay updated with exclusive offers, lake stories, and seasonal
-              experiences.
+              Stay updated with exclusive offers and availability at 2NT
+              Apartments Lodge.
             </p>
             <div className="flex flex-col gap-3">
               <input
@@ -163,12 +162,12 @@ export default function Footer() {
 
       {/* Divider */}
       <div className="border-t border-white/10">
-        <div className="max-w-[1280px] mx-auto px-5 md:px-16 py-6 flex flex-col md:flex-row justify-between items-center gap-3">
+        <div className="max-w-[1280px] mx-auto px-5 md:px-16 py-6 pb-24 md:pb-6 flex flex-col md:flex-row justify-between items-center gap-3">
           <p className="font-body text-xs text-white/30">
-            © 2026 Mikoma Beach Lodge. All Rights Reserved.
+            © 2026 2NT Apartments Lodge. All Rights Reserved.
           </p>
           <p className="font-body text-xs text-white/30">
-            Karonga, Northern Malawi
+            Lilongwe, Malawi
           </p>
         </div>
       </div>

@@ -65,8 +65,7 @@ export default function RoomsPage() {
             className="font-body text-base md:text-lg text-on-surface-variant max-w-2xl mx-auto leading-relaxed"
           >
             Discover a collection of refined living spaces, each meticulously
-            crafted to merge contemporary luxury with the raw beauty of Lake
-            Malawi's shores.
+            crafted to merge contemporary luxury with the raw beauty of 2NT
           </motion.p>
         </div>
       </section>

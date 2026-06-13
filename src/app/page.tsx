@@ -4,9 +4,9 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import {
-  Waves,
+  Home as HomeIcon,
   UtensilsCrossed,
-  Users,
+  ShieldCheck,
   Wifi,
   ChevronDown,
   Star,
@@ -21,36 +21,34 @@ import { testimonials } from "@/data/testimonials";
 import { rooms } from "@/data/rooms";
 
 const highlights = [
-  { icon: Waves, label: "Beachfront Access" },
-  { icon: UtensilsCrossed, label: "Lake Restaurant" },
-  { icon: Users, label: "Conference Centre" },
+  { icon: HomeIcon, label: "Self-Catering Units" },
+  { icon: ShieldCheck, label: "24/7 Security" },
+  { icon: UtensilsCrossed, label: "Fully Equipped Kitchens" },
   { icon: Wifi, label: "Free WiFi" },
 ];
 
 const galleryImages = [
   {
-    src: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800",
-    alt: "Lake Malawi shoreline",
+    src: "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=800",
+    alt: "Apartment building exterior",
   },
   {
     src: "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800",
-    alt: "Lodge room interior",
+    alt: "Apartment bedroom interior",
   },
   {
-    src: "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=800",
-    alt: "Restaurant dining",
+    src: "https://images.unsplash.com/photo-1556911220-bff31c812dba?w=800",
+    alt: "Modern kitchen",
   },
   {
-    src: "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=800",
-    alt: "Spa treatment",
+    src: "https://images.unsplash.com/photo-1567538096630-e0c55bd6374c?w=800",
+    alt: "Living room lounge area",
   },
   {
-    src: "https://images.unsplash.com/photo-1530549387789-4c1017266635?w=800",
-    alt: "Water sports",
+    src: "https://images.unsplash.com/photo-1560185127-6ed189bf02f4?w=800",
+    alt: "Secure parking area",
   },
 ];
-
-
 
 export default function Home() {
   const [currentTestimonial, setCurrentTestimonial] = useState(0);
@@ -79,8 +77,8 @@ export default function Home() {
       <section className="relative h-screen min-h-[600px] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
-            src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1920"
-            alt="Lake Malawi at sunrise"
+            src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=1920"
+            alt="2NT Apartments Lodge exterior"
             fill
             className="object-cover object-center"
             priority
@@ -97,7 +95,7 @@ export default function Home() {
             transition={{ delay: 0.1 }}
             className="font-body text-xs tracking-[0.3em] uppercase text-white/70 mb-6"
           >
-            Karonga, Lake Malawi
+            Lilongwe, Malawi
           </motion.p>
 
           <motion.h1
@@ -107,7 +105,7 @@ export default function Home() {
             transition={{ delay: 0.3, duration: 0.7 }}
             className="font-display text-4xl md:text-6xl lg:text-7xl text-white leading-tight text-shadow mb-8"
           >
-            Experience Comfort and Serenity on the Shores of Lake Malawi
+            Your Home Away From Home in the Heart of Lilongwe
           </motion.h1>
 
           <motion.div
@@ -127,7 +125,7 @@ export default function Home() {
               href="/rooms"
               className="w-full sm:w-auto border border-white text-white font-body text-xs font-semibold tracking-[0.2em] uppercase px-10 py-4 hover:bg-white hover:text-primary transition-all duration-300"
             >
-              Explore Rooms
+              Explore Apartments
             </Link>
           </motion.div>
         </div>
@@ -191,8 +189,8 @@ export default function Home() {
             >
               <div className="aspect-[4/5] relative overflow-hidden">
                 <Image
-                 src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=900"
-                  alt="Lodge interior"
+                  src="https://images.unsplash.com/photo-1567538096630-e0c55bd6374c?w=900"
+                  alt="2NT Apartments interior"
                   fill
                   className="object-cover hover:scale-105 transition-transform duration-700"
                 />
@@ -200,10 +198,10 @@ export default function Home() {
               <div className="absolute -bottom-6 -right-6 w-40 h-40 border border-accent/30 -z-10 hidden md:block" />
               <div className="absolute -bottom-4 -left-4 md:bottom-8 md:-left-8 bg-primary text-white px-6 py-4 text-center">
                 <span className="font-display text-3xl text-accent block">
-                  10+
+                  100%
                 </span>
                 <span className="font-body text-xs tracking-widest uppercase text-white/70">
-                  Years of Excellence
+                  Self-Catering Comfort
                 </span>
               </div>
             </motion.div>
@@ -221,18 +219,19 @@ export default function Home() {
                   Our Story
                 </p>
                 <h2 className="font-display text-3xl md:text-4xl text-primary leading-tight">
-                  A Legacy of Lakeside Luxury
+                  Comfort, Convenience, and Security
                 </h2>
               </div>
               <p className="font-body text-base text-on-surface-variant leading-relaxed">
-                Nestled on the pristine western shores of Lake Malawi, Mikoma
-                Beach Lodge was born from a vision to harmonize exclusive
-                comfort with the raw, rhythmic beauty of the "Lake of Stars."
+                2NT Apartments Lodge offers modern, fully furnished apartments
+                in a secure, gated compound in Lilongwe. Whether you're here
+                for business, relocation, or a short city stay, our units are
+                designed to feel like home.
               </p>
               <p className="font-body text-base text-on-surface-variant leading-relaxed">
-                Every stone, every piece of timber, and every view has been
-                meticulously curated to offer an escape that is as deep as the
-                lake itself.
+                Every apartment is thoughtfully equipped with everything you
+                need — from fully fitted kitchens to fast WiFi and reliable
+                backup power, so you can settle in and focus on what matters.
               </p>
               <Link
                 href="/about"
@@ -246,7 +245,7 @@ export default function Home() {
       </section>
 
       {/* ═══════════════════════════════════════
-          4. FEATURED ROOMS
+          4. FEATURED APARTMENTS
       ═══════════════════════════════════════ */}
       <section className="py-20 md:py-32 bg-surface">
         <div className="max-w-[1280px] mx-auto px-5 md:px-16">
@@ -262,14 +261,14 @@ export default function Home() {
                 Accommodation
               </p>
               <h2 className="font-display text-3xl md:text-4xl text-primary">
-                The Collection
+                Our Apartments
               </h2>
             </div>
             <Link
               href="/rooms"
               className="inline-flex items-center gap-3 font-body text-xs font-semibold tracking-[0.2em] uppercase text-primary hover:gap-5 transition-all duration-300 self-start md:self-auto"
             >
-              View All Suites <MoveRight size={16} />
+              View All Apartments <MoveRight size={16} />
             </Link>
           </motion.div>
 
@@ -322,7 +321,7 @@ export default function Home() {
                         {room.bedType}
                       </span>
                       <span className="ml-auto font-display text-lg text-primary">
-                        Mk{room.price}
+                        MK {room.price.toLocaleString()}
                         <span className="font-body text-xs text-on-surface-variant">
                           /night
                         </span>
@@ -367,24 +366,24 @@ export default function Home() {
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-px bg-white/10">
             {[
               {
-                icon: Waves,
-                label: "Beachfront Access",
-                desc: "Private beach directly on Lake Malawi",
+                icon: ShieldCheck,
+                label: "24/7 Secure Parking",
+                desc: "Gated compound with round-the-clock security",
               },
               {
                 icon: UtensilsCrossed,
-                label: "Lakeside Restaurant",
-                desc: "Fresh lake fish and international cuisine",
+                label: "Fully Equipped Kitchens",
+                desc: "Self-catering units with fridge, stove, and utensils",
               },
               {
-                icon: Users,
-                label: "Conference Centre",
-                desc: "Fully equipped for up to 80 delegates",
+                icon: HomeIcon,
+                label: "Backup Power & Water",
+                desc: "Reliable generator and water backup, always on",
               },
               {
                 icon: Wifi,
-                label: "Water Sports",
-                desc: "Kayaking, snorkelling, and boat tours",
+                label: "Free High-Speed WiFi",
+                desc: "Fast, reliable internet in every apartment",
               },
             ].map((facility, i) => (
               <motion.div
@@ -521,7 +520,7 @@ export default function Home() {
                 Visual Journey
               </p>
               <h2 className="font-display text-3xl md:text-4xl text-primary">
-                Life at Mikoma
+                Life at 2NT
               </h2>
             </div>
             <Link
@@ -566,8 +565,8 @@ export default function Home() {
       <section className="relative py-24 md:py-40 overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
-          src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=1920"
-            alt="Lake Malawi sunset"
+            src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=1920"
+            alt="2NT Apartments Lodge"
             fill
             className="object-cover"
           />
@@ -583,20 +582,20 @@ export default function Home() {
             className="space-y-6 md:space-y-8"
           >
             <p className="font-body text-xs tracking-[0.3em] uppercase text-accent">
-              Begin Your Journey
+              Begin Your Stay
             </p>
             <h2 className="font-display text-3xl md:text-5xl text-white max-w-2xl mx-auto leading-tight">
-              Your Lakeside Sanctuary Awaits
+              Your Comfortable Stay in Lilongwe Awaits
             </h2>
             <p className="font-body text-base text-white/70 max-w-lg mx-auto leading-relaxed">
-              Book your stay today and discover why Mikoma Beach Lodge is
-              Malawi's best-kept secret.
+              Book your apartment today and discover why 2NT Apartments Lodge
+              is Lilongwe's go-to choice for comfort and convenience.
             </p>
             <Link
               href="/booking"
               className="inline-block bg-accent text-primary font-body text-xs font-semibold tracking-[0.25em] uppercase px-12 py-5 hover:bg-white transition-all duration-300 mt-4"
             >
-              RESERVE YOUR EXPERIENCE
+              RESERVE YOUR STAY
             </Link>
           </motion.div>
         </div>

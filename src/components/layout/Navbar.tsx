@@ -63,7 +63,7 @@ export default function Navbar() {
                 isTransparent ? "text-white" : "text-primary"
               }`}
             >
-              MIKOMA BEACH LODGE
+              2NT APARTMENT LODGE
             </Link>
 
             {/* Desktop Nav Links */}

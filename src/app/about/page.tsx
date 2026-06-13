@@ -4,91 +4,89 @@ import { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
-import { Waves, Leaf, Users, MoveRight } from "lucide-react";
+import { ShieldCheck, Home as HomeIcon, Users, MoveRight } from "lucide-react";
 import Breadcrumb from "@/components/ui/Breadcrumb";
 
-
-
 const stats = [
-  { value: 30, suffix: "+", label: "Years of Excellence" },
-  { value: 10000, suffix: "+", label: "Guests Welcomed" },
-  { value: 100, suffix: "%", label: "Solar Powered" },
-  { value: 50, suffix: "+", label: "Local Staff" },
+  { value: 10, suffix: "+", label: "Years of Service" },
+  { value: 5000, suffix: "+", label: "Guests Hosted" },
+  { value: 24, suffix: "/7", label: "Security & Power" },
+  { value: 15, suffix: "+", label: "Apartment Units" },
 ];
 
 const values = [
   {
-    icon: Waves,
-    title: "Personal Service",
+    icon: HomeIcon,
+    title: "Comfort First",
     description:
-      "We believe in the luxury of anticipation. Every detail of your stay is tailored to your silent desires, delivered with genuine Malawian warmth.",
+      "Every apartment is fully furnished and equipped to feel like home from the moment you arrive — clean, comfortable, and ready for you.",
   },
   {
-    icon: Leaf,
-    title: "Sustainability",
+    icon: ShieldCheck,
+    title: "Security & Reliability",
     description:
-      "Our operations are deeply integrated with the lake's ecology. From solar power to water conservation, we tread lightly on the earth.",
+      "Our gated compound offers 24/7 security, backup power, and backup water, so you can stay with total peace of mind.",
   },
   {
     icon: Users,
-    title: "Community",
+    title: "Personalised Service",
     description:
-      "We are part of the village fabric. We support local artisans, schools, and healthcare, ensuring our growth is shared by all.",
+      "From short business stays to longer relocations, our team is on hand to make sure every guest feels welcomed and looked after.",
   },
 ];
 
 const timeline = [
   {
-    year: "1994",
-    title: "The First Foundation",
+    year: "2016",
+    title: "The First Units",
     description:
-      "Founded as a small family retreat with just four timber chalets, driven by a passion for the Lake's unique biodiversity and the warmth of Malawian culture.",
+      "2NT Apartments Lodge opened its doors with a small set of self-catering units in Lilongwe, built around the idea of comfortable, secure city accommodation.",
     image:
-      "https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=900",
+      "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=900",
   },
   {
-    year: "2008",
-    title: "The Green Pivot",
+    year: "2019",
+    title: "Expanding Our Compound",
     description:
-      "Transitioned to 100% solar energy and established our first community outreach program, funding the local primary school and supporting over 200 families.",
+      "Added more apartment units and upgraded our security infrastructure, including a backup generator and water storage for uninterrupted comfort.",
     image: null,
   },
   {
-    year: "2016",
-    title: "Expanding the Vision",
+    year: "2022",
+    title: "Serving Business Travellers",
     description:
-      "Added the Executive Horizon Wing and the Lakeside Restaurant, bringing world-class dining and ultra-luxury accommodation to the shores of Lake Malawi.",
+      "Became a preferred choice for business travellers and short-term relocations, with high-speed WiFi and flexible booking added across all units.",
     image:
-      "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=900",
+      "https://images.unsplash.com/photo-1556911220-bff31c812dba?w=900",
   },
   {
-    year: "2024",
-    title: "Refining Excellence",
+    year: "2026",
+    title: "Refreshed & Renewed",
     description:
-      "Opening of our new Sky Suites — an architectural fusion of contemporary Malawian art and ultra-luxury ecological design.",
+      "A full refresh of our apartments and shared spaces — new furnishings, upgraded kitchens, and a renewed commitment to comfort and convenience.",
     image:
-      "https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=900",
+      "https://images.unsplash.com/photo-1567538096630-e0c55bd6374c?w=900",
   },
 ];
 
 const gridImages = [
-    {
-      src: "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=800",
-      alt: "Culinary excellence",
-    },
-    {
-      src: "https://images.unsplash.com/photo-1540555700478-4be289fbecef?w=800",
-      alt: "Spa and wellness",
-    },
-    {
-      src: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800",
-      alt: "Lake Malawi views",
-    },
-    {
-      src:  "https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=900",
-      alt: "Lodge suite interior",
-    },
-  ];
+  {
+    src: "https://images.unsplash.com/photo-1556911220-bff31c812dba?w=800",
+    alt: "Modern kitchen",
+  },
+  {
+    src: "https://images.unsplash.com/photo-1567538096630-e0c55bd6374c?w=800",
+    alt: "Living room lounge area",
+  },
+  {
+    src: "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=800",
+    alt: "Apartment building exterior",
+  },
+  {
+    src: "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=900",
+    alt: "Apartment bedroom interior",
+  },
+];
 
 // Animated counter hook
 function useCountUp(target: number, isVisible: boolean) {
@@ -161,7 +159,7 @@ export default function AboutPage() {
           BREADCRUMB
       ═══════════════════════════════════ */}
       <div className="pt-[72px]">
-        <Breadcrumb items={[{ label: "The Lodge" }]} />
+        <Breadcrumb items={[{ label: "About Us" }]} />
       </div>
 
       {/* ═══════════════════════════════════
@@ -170,8 +168,8 @@ export default function AboutPage() {
       <section className="relative h-[70vh] min-h-[500px] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
-            src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1920"
-            alt="Lake Malawi at Mikoma Beach Lodge"
+            src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=1920"
+            alt="2NT Apartments Lodge exterior"
             fill
             className="object-cover"
             priority
@@ -196,7 +194,7 @@ export default function AboutPage() {
             transition={{ delay: 0.15 }}
             className="font-display text-4xl md:text-6xl text-white leading-tight text-shadow mb-6"
           >
-            Our Legacy of Hospitality
+            Built Around Your Comfort
           </motion.h1>
           <motion.p
             variants={fadeUp}
@@ -205,9 +203,9 @@ export default function AboutPage() {
             transition={{ delay: 0.3 }}
             className="font-body text-base md:text-lg text-white/80 max-w-2xl mx-auto leading-relaxed"
           >
-            Rooted in the pristine shores of Lake Malawi, Mikoma is more than a
-            destination it is a decades-long commitment to harmony between man
-            and nature.
+            2NT Apartments Lodge is more than a place to stay in Lilongwe —
+            it's a secure, comfortable, and reliable home for business
+            travellers, families, and anyone passing through the capital.
           </motion.p>
         </div>
       </section>
@@ -253,14 +251,14 @@ export default function AboutPage() {
                 Our Mission
               </p>
               <h2 className="font-display text-3xl md:text-4xl text-primary mb-6 leading-tight">
-                Where Luxury Meets the Lake
+                A Reliable Place to Stay in Lilongwe
               </h2>
               <p className="font-body text-base text-on-surface-variant leading-relaxed">
-                To curate unparalleled experiences that celebrate the spirit of
-                Lake Malawi, providing a sanctuary where luxury meets ecological
-                stewardship. We strive to offer our guests a profound connection
-                to the landscape through meticulous service and authentic
-                engagement with local culture.
+                To provide clean, secure, and fully equipped apartments for
+                anyone visiting or living in Lilongwe — whether for business,
+                relocation, or a short city break. We focus on the details
+                that matter: reliable power, fast WiFi, secure parking, and a
+                comfortable place to come home to.
               </p>
             </motion.div>
 
@@ -274,8 +272,8 @@ export default function AboutPage() {
               className="md:col-span-5 relative overflow-hidden min-h-[400px] group"
             >
               <Image
-                src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=900"
-                alt="Lodge hospitality"
+                src="https://images.unsplash.com/photo-1567538096630-e0c55bd6374c?w=900"
+                alt="2NT Apartments living space"
                 fill
                 className="object-cover group-hover:scale-105 transition-transform duration-700"
               />
@@ -290,8 +288,8 @@ export default function AboutPage() {
               className="md:col-span-5 relative overflow-hidden min-h-[400px] group"
             >
               <Image
-                src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=900"
-                alt="Lake Malawi vision"
+                src="https://images.unsplash.com/photo-1556911220-bff31c812dba?w=900"
+                alt="2NT Apartments kitchen"
                 fill
                 className="object-cover group-hover:scale-105 transition-transform duration-700"
               />
@@ -311,14 +309,12 @@ export default function AboutPage() {
                 Our Vision
               </p>
               <h2 className="font-display text-3xl md:text-4xl text-white mb-6 leading-tight">
-                A Beacon of Sustainable Luxury
+                Lilongwe's Trusted Choice for Apartment Stays
               </h2>
               <p className="font-body text-base text-white/70 leading-relaxed">
-                To be the global benchmark for refined organicism — a place
-                where the luxury of tomorrow is defined by the preservation of
-                today. We envision a future where every guest journey contributes
-                directly to the flourishing of our local community and the
-                vibrant ecosystem of the Lake.
+                We aim to be the go-to apartment lodge for travellers and
+                professionals in Lilongwe — known for consistency, security,
+                and a genuinely warm welcome every time you stay with us.
               </p>
             </motion.div>
           </div>
@@ -341,7 +337,7 @@ export default function AboutPage() {
               What We Stand For
             </p>
             <h2 className="font-display text-3xl md:text-4xl text-primary">
-              The Pillars of Mikoma
+              The 2NT Standard
             </h2>
             <div className="w-16 h-px bg-secondary mx-auto mt-6" />
           </motion.div>
@@ -396,9 +392,8 @@ export default function AboutPage() {
                 A Journey Through Time
               </h2>
               <p className="font-body text-base text-on-surface-variant leading-relaxed">
-                Witness the evolution of Mikoma Beach Lodge, from a humble
-                lakeside retreat to a beacon of sustainable luxury on Africa's
-                finest freshwater lake.
+                From a handful of units to a trusted apartment lodge — here's
+                how 2NT Apartments Lodge has grown over the years.
               </p>
             </motion.div>
 
@@ -468,7 +463,7 @@ export default function AboutPage() {
             className="text-center mb-12"
           >
             <p className="font-body text-xs tracking-[0.25em] uppercase text-secondary mb-4">
-              Life at Mikoma
+              Life at 2NT
             </p>
             <h2 className="font-display text-3xl md:text-4xl text-primary">
               Moments Worth Remembering
@@ -509,8 +504,8 @@ export default function AboutPage() {
       <section className="relative py-24 md:py-32 overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
-            src="https://images.unsplash.com/photo-1540541338287-41700207dee6?w=1920"
-            alt="Lake Malawi sunset"
+            src="https://images.unsplash.com/photo-1556911220-bff31c812dba?w=1920"
+            alt="2NT Apartments Lodge"
             fill
             className="object-cover"
           />
@@ -525,14 +520,14 @@ export default function AboutPage() {
             className="space-y-6"
           >
             <p className="font-body text-xs tracking-[0.3em] uppercase text-accent">
-              Begin Your Journey
+              Begin Your Stay
             </p>
             <h2 className="font-display text-3xl md:text-5xl text-white max-w-2xl mx-auto leading-tight">
               Come Experience It Yourself
             </h2>
             <p className="font-body text-base text-white/70 max-w-lg mx-auto leading-relaxed">
-              Words and photographs can only tell part of our story. The rest is
-              waiting for you on the shores of Lake Malawi.
+              Photos can only tell part of the story. The comfort of 2NT
+              Apartments Lodge is best experienced in person.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
               <Link
@@ -545,7 +540,7 @@ export default function AboutPage() {
                 href="/rooms"
                 className="inline-flex items-center justify-center gap-3 border border-white text-white font-body text-xs font-semibold tracking-[0.2em] uppercase px-10 py-4 hover:bg-white hover:text-primary transition-all duration-300"
               >
-                Explore Suites
+                Explore Apartments
               </Link>
             </div>
           </motion.div>

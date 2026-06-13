@@ -160,7 +160,7 @@ export default function FacilitiesPage() {
             transition={{ delay: 0.3 }}
             className="font-body text-base md:text-lg text-white/80 max-w-2xl mx-auto leading-relaxed"
           >
-            Every detail at Mikoma is curated to harmonize with the shores of
+            Every detail at 2NT is curated to harmonize with the shores of
             Lake Malawi, offering refined spaces for gathering, dining, and
             repose.
           </motion.p>
@@ -519,8 +519,8 @@ export default function FacilitiesPage() {
               Experience Every Facility First-Hand
             </h2>
             <p className="font-body text-base text-white/70 max-w-lg mx-auto leading-relaxed">
-              Book your stay today and discover why Mikoma Beach Lodge is
-              Malawi's finest lakeside retreat.
+              Book your stay today and discover why 2NT Lodge is
+              Malawi's finest retreat.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
               <Link
