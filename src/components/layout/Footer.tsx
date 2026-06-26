@@ -36,7 +36,7 @@ export default function Footer() {
 
             {/* Social Icons */}
             <div className="flex items-center gap-4">
-              
+              <a
                 href="#"
                 className="w-9 h-9 border border-white/20 flex items-center justify-center text-white/60 hover:border-accent hover:text-accent transition-all duration-300"
                 aria-label="Facebook"
@@ -45,7 +45,7 @@ export default function Footer() {
                   <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
                 </svg>
               </a>
-              
+              <a
                 href="#"
                 className="w-9 h-9 border border-white/20 flex items-center justify-center text-white/60 hover:border-accent hover:text-accent transition-all duration-300"
                 aria-label="Instagram"
@@ -124,7 +124,7 @@ export default function Footer() {
                 <Phone size={14} />
                 CALL TO BOOK
               </a>
-              
+              <a
                 href="https://wa.me/265892259165"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -144,7 +144,7 @@ export default function Footer() {
           <p className="font-body text-xs text-white/30">
             © 2026 Mphatso Motel. All Rights Reserved.
           </p>
-          
+          <a
             href="https://ram-techs.online"
             target="_blank"
             rel="noopener noreferrer"
