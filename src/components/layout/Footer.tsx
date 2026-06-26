@@ -117,7 +117,7 @@ export default function Footer() {
               call or WhatsApp.
             </p>
             <div className="flex flex-col gap-3">
-              
+              <a
                 href="tel:+265983578271"
                 className="flex items-center justify-center gap-3 bg-accent text-primary font-body text-xs font-semibold tracking-[0.2em] uppercase py-3 hover:bg-accent/90 transition-colors duration-300"
               >
