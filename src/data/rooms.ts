@@ -121,7 +121,7 @@ export const rooms: Room[] = [
     id: "5",
     slug: "standard-twin-sharing",
     name: "Standard Twin Sharing",
-    category: "Standard",
+    category: "Twin Sharing",
     description:
       "A spacious room with two beds and breakfast included — great for friends or colleagues travelling together.",
     longDescription:
@@ -150,7 +150,7 @@ export const rooms: Room[] = [
     id: "6",
     slug: "c-room",
     name: "C-Room",
-    category: "Standard",
+    category: "C-Room",
     description:
       "A simple, clean room without breakfast — the most affordable option for a no-frills overnight stay.",
     longDescription:

@@ -16,7 +16,7 @@ import { rooms } from "@/data/rooms";
 import { Room } from "@/types";
 import Breadcrumb from "@/components/ui/Breadcrumb";
 
-const categories = ["All", "Executive", "Standard"];
+const categories = ["All", "Executive", "Standard", "Twin Sharing", "C-Room"];
 
 export default function RoomsPage() {
   const [activeCategory, setActiveCategory] = useState("All");
@@ -158,12 +158,10 @@ export default function RoomsPage() {
 
                   {/* Content */}
                   <div className="p-6 md:p-8 flex flex-col flex-grow border border-t-0 border-outline-variant/30">
-                    {/* Name */}
                     <h2 className="font-display text-xl md:text-2xl text-primary mb-4 group-hover:text-secondary transition-colors duration-300">
                       {room.name}
                     </h2>
 
-                    {/* Stats Row */}
                     <div className="flex flex-wrap items-center gap-4 mb-5 text-on-surface-variant">
                       <span className="flex items-center gap-2 font-body text-xs font-semibold tracking-wider uppercase">
                         <Users size={13} />
@@ -179,12 +177,10 @@ export default function RoomsPage() {
                       </span>
                     </div>
 
-                    {/* Description */}
                     <p className="font-body text-sm text-on-surface-variant leading-relaxed mb-6 line-clamp-2">
                       {room.description}
                     </p>
 
-                    {/* Features */}
                     <div className="grid grid-cols-2 gap-2 mb-8">
                       {room.features.slice(0, 4).map((feature) => (
                         <div
@@ -200,7 +196,6 @@ export default function RoomsPage() {
                       ))}
                     </div>
 
-                    {/* Actions — Call or WhatsApp instead of booking */}
                     <div className="mt-auto flex gap-3">
                       <a
                         href="tel:+265983578271"
@@ -241,7 +236,6 @@ export default function RoomsPage() {
             </h3>
           </div>
           <div className="flex flex-col sm:flex-row gap-3 shrink-0">
-            
             <a
               href="tel:+265983578271"
               className="inline-flex items-center justify-center gap-2 bg-white text-primary font-body text-xs font-semibold tracking-[0.2em] uppercase px-8 py-4 hover:bg-accent hover:text-white transition-all duration-300"
@@ -249,7 +243,8 @@ export default function RoomsPage() {
               <Phone size={14} />
               Call Us
             </a>
-            <a
+            
+             <a
               href="https://wa.me/265892259165"
               target="_blank"
               rel="noopener noreferrer"
