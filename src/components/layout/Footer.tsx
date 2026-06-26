@@ -30,13 +30,13 @@ export default function Footer() {
             </Link>
 
             <p className="font-body text-sm text-white/60 leading-relaxed max-w-xs">
-              Your comfortable stop along the M1 Road in Mzuzu clean rooms,
+              Your comfortable stop along the M1 Road in Mzuzu — clean rooms,
               conference facilities, and warm Malawian hospitality.
             </p>
 
             {/* Social Icons */}
             <div className="flex items-center gap-4">
-              <a
+              
                 href="#"
                 className="w-9 h-9 border border-white/20 flex items-center justify-center text-white/60 hover:border-accent hover:text-accent transition-all duration-300"
                 aria-label="Facebook"
@@ -45,7 +45,7 @@ export default function Footer() {
                   <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
                 </svg>
               </a>
-              <a
+              
                 href="#"
                 className="w-9 h-9 border border-white/20 flex items-center justify-center text-white/60 hover:border-accent hover:text-accent transition-all duration-300"
                 aria-label="Instagram"
@@ -117,14 +117,14 @@ export default function Footer() {
               call or WhatsApp.
             </p>
             <div className="flex flex-col gap-3">
-              <a
+              
                 href="tel:+265983578271"
                 className="flex items-center justify-center gap-3 bg-accent text-primary font-body text-xs font-semibold tracking-[0.2em] uppercase py-3 hover:bg-accent/90 transition-colors duration-300"
               >
                 <Phone size={14} />
                 CALL TO BOOK
               </a>
-              <a
+              
                 href="https://wa.me/265892259165"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -138,22 +138,22 @@ export default function Footer() {
         </div>
       </div>
 
-   {/* Bottom Bar */}
-<div className="border-t border-white/10">
-  <div className="max-w-[1280px] mx-auto px-5 md:px-16 py-6 pb-24 md:pb-6 flex flex-col md:flex-row justify-between items-center gap-3">
-    <p className="font-body text-xs text-white/30">
-      © 2026 Mphatso Motel. All Rights Reserved.
-    </p>
-    
-      href="https://ram-techs.online"
-      target="_blank"
-      rel="noopener noreferrer"
-      className="font-body text-xs text-white/30 hover:text-accent transition-colors duration-300"
-    >
-      Designed & Developed by RamTech
-    </a>
-  </div>
-</div>
+      {/* Bottom Bar */}
+      <div className="border-t border-white/10">
+        <div className="max-w-[1280px] mx-auto px-5 md:px-16 py-6 pb-24 md:pb-6 flex flex-col md:flex-row justify-between items-center gap-3">
+          <p className="font-body text-xs text-white/30">
+            © 2026 Mphatso Motel. All Rights Reserved.
+          </p>
+          
+            href="https://ram-techs.online"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-body text-xs text-white/30 hover:text-accent transition-colors duration-300"
+          >
+            Designed & Developed by RamTech
+          </a>
+        </div>
+      </div>
     </footer>
   );
 }
