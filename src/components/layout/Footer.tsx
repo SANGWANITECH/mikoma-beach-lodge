@@ -138,17 +138,22 @@ export default function Footer() {
         </div>
       </div>
 
-      {/* Bottom Bar */}
-      <div className="border-t border-white/10">
-        <div className="max-w-[1280px] mx-auto px-5 md:px-16 py-6 pb-24 md:pb-6 flex flex-col md:flex-row justify-between items-center gap-3">
-          <p className="font-body text-xs text-white/30">
-            © 2026 Mphatso Motel. All Rights Reserved.
-          </p>
-          <p className="font-body text-xs text-white/30">
-            Chiwanja, Mzuzu, Malawi
-          </p>
-        </div>
-      </div>
+   {/* Bottom Bar */}
+<div className="border-t border-white/10">
+  <div className="max-w-[1280px] mx-auto px-5 md:px-16 py-6 pb-24 md:pb-6 flex flex-col md:flex-row justify-between items-center gap-3">
+    <p className="font-body text-xs text-white/30">
+      © 2026 Mphatso Motel. All Rights Reserved.
+    </p>
+    
+      href="https://ram-techs.online"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="font-body text-xs text-white/30 hover:text-accent transition-colors duration-300"
+    >
+      Designed & Developed by RamTech
+    </a>
+  </div>
+</div>
     </footer>
   );
 }
